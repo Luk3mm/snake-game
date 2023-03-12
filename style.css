@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ccc;
+  font-family: "Press Start 2P", cursive;
+}
+
+.container {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  background: #151d47;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(51, 88, 220, 0.2);
+}
+
+.detalhes-game {
+  color: #ddd;
+  font-size: 0.9rem;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jogo {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #0c1129;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.jogo .comida {
+  background: #da1a1a;
+}
+
+.jogo .cobra {
+  background: #138d20;
+}
+
+.controles {
+  display: none;
+  justify-content: space-between;
+}
+
+.controles i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #ddd;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #333;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 90vmin;
+    height: 115vmin;
+  }
+
+  .detalhes-game {
+    font-size: 0.7rem;
+    padding: 14px 25px;
+  }
+
+  .controles {
+    display: flex;
+  }
+
+  .controle i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
